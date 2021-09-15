@@ -1,0 +1,8 @@
+gitUserId: JauntyInc
+gitRepoId: php-geocodes
+artifactVersion: 1.0.0-alpha
+homepage: https://geo.codes
+packageName: GeoCodes
+invokerPackage: GeoCodes
+gitHost: github.com
+apiTests: false

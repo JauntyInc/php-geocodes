@@ -1,0 +1,37 @@
+{
+    "version": "1.0.0-alpha",
+    "description": "The alpha version of the [https://geo.codes](https://geo.codes) API service. See API documentation [here](https://geo.codes/docs/api). 10,000 free queries per month.",
+    "keywords": [
+	"geocoding",
+	"geocodes",
+	"geocode",
+        "openapi",
+        "php",
+        "sdk",
+        "rest",
+        "api"
+    ],
+    "homepage": "https://geo.codes",
+    "license": "Apache 2.0",
+    "authors": [
+        {
+            "name": "Jaunty, Inc.",
+            "homepage": "https://geo.codes"
+        }
+    ],
+    "require": {
+        "php": "^7.3 || ^8.0",
+        "ext-curl": "*",
+        "ext-json": "*",
+        "ext-mbstring": "*",
+        "guzzlehttp/guzzle": "^6.2"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^2.12"
+    },
+    "autoload": {
+        "psr-4": { "GeoCodes\\" : "lib/" }
+    },
+    "autoload-dev": {
+    }
+}
