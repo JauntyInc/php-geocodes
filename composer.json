@@ -1,5 +1,5 @@
 {
-    "name": "geo.codes",
+    "name": "jauntyinc/php-geocodes",
     "version": "1.0.0-alpha",
     "description": "The alpha version of the [https://geo.codes](https://geo.codes) API service. See API documentation [here](https://geo.codes/docs/api). 10,000 free queries per month.",
     "keywords": [
