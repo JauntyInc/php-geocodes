@@ -1,0 +1,20 @@
+{
+    "name": "jauntyinc/php-geocodes-example",
+    "description": "Example project using geo.codes' PHP bindings",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Jake Voytko",
+            "email": "jake@jaunty.tech"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/JauntyInc/php-geocodes.git"
+        }
+  ],
+  "require": {
+      "JauntyInc/php-geocodes": "*@dev"
+  }
+}

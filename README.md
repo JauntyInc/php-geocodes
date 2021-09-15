@@ -43,39 +43,29 @@ require_once('/path/to/GeoCodes/vendor/autoload.php');
 
 Please follow the [installation procedure](#installation--usage) and then run the following:
 
+Note that a full working program can be found in the example/ directory
+
 ```php
 <?php
+  
 require_once(__DIR__ . '/vendor/autoload.php');
 
-
-
-// Configure API key authorization: ApiKeyHeaderAuth
-$config = GeoCodes\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = GeoCodes\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
-
-// Configure API key authorization: ApiKeyURLAuth
-$config = GeoCodes\Configuration::getDefaultConfiguration()->setApiKey('api_key', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = GeoCodes\Configuration::getDefaultConfiguration()->setApiKeyPrefix('api_key', 'Bearer');
-
-
+$config = GeoCodes\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY_HERE');
 $apiInstance = new GeoCodes\Api\AddressApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$q = 'q_example'; // string | The unstructured address to geocode. Expected to be roughly the format that is used by the USPS to deliver mail.
-$min_confidence = 56; // int | The minimum confidence in the results required to return an address, as a percentage between 0 and 100. Default: 30. To accept only exact data matches, choose 100. To be as permissive as possible, set it to 0. We don't recommend setting this higher than 90. It is very common for people to write their own addresses in ways that deviate from the exact match.
+$q = '111 8th Ave, New York, NY 10011';
 
 try {
-    $result = $apiInstance->v1AddressGeocode($q, $min_confidence);
+    $result = $apiInstance->v1AddressGeocode($q);
     print_r($result);
+    printf("Latitude: [%f] Longitude: [%f]\n", $result['coordinate']['latitude'], $result['coordinate']['longitude']);
 } catch (Exception $e) {
     echo 'Exception when calling AddressApi->v1AddressGeocode: ', $e->getMessage(), PHP_EOL;
 }
-
 ```
 
 ## API Endpoints
