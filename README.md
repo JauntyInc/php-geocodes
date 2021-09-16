@@ -12,23 +12,16 @@ Should also work with PHP 8.0 but has not been tested.
 
 ### Composer
 
-To install the bindings via [Composer](https://getcomposer.org/), add the following to `composer.json`:
+To install the bindings via [Composer](https://getcomposer.org/), use the following command:
 
-```json
-{
-  "repositories": [
-    {
-      "type": "vcs",
-      "url": "https://github.com/JauntyInc/php-geocodes.git"
-    }
-  ],
-  "require": {
-    "JauntyInc/php-geocodes": "*@dev"
-  }
-}
+```bash
+composer require jauntyinc/php-geocodes
 ```
 
 Then run `composer install`
+
+Check out the [example](https://github.com/JauntyInc/php-geocodes/tree/main/example) to see a working
+program.
 
 ### Manual Installation
 
