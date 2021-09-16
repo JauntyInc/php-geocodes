@@ -8,13 +8,8 @@
             "email": "jake@jaunty.tech"
         }
     ],
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/JauntyInc/php-geocodes.git"
-        }
-  ],
-  "require": {
-      "JauntyInc/php-geocodes": "*@dev"
-  }
+    "minimum-stability": "dev",
+    "require": {
+        "jauntyinc/php-geocodes": "dev-main"
+    }
 }
